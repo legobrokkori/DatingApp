@@ -22,10 +22,11 @@ export class ErrorInterceptor implements HttpInterceptor {
                   if (serverError && typeof serverError === 'object') {
                       for (const key  in serverError) {
                           if (serverError[key]) {
-                              modelStateErrors += serverError[key] + '\n';                          }
+                              modelStateErrors += serverError[key] + '\n';
+                          }
                       }
                   }
-                  return throwError(modelStateErrors || serverError || 'Server Error')
+                  return throwError(modelStateErrors || serverError || 'Server Error');
                 }
             })
         );
