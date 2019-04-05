@@ -38,8 +38,8 @@ export class AuthService {
     );
   }
 
-  register(model: any) {
-    return this.http.post(this.baseUral + 'register', model);
+  register(user: User) {
+    return this.http.post(this.baseUral + 'register', user);
   }
 
   logedIn() {
