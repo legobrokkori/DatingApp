@@ -1,7 +1,7 @@
 [
   {
     "Username": "Toni",
-    "Gender": "female",
+    "Gender": "femen",
     "DateOfBirth": "1958-04-11",
     "Password": "password",
     "KnownAs": "Toni",
@@ -21,7 +21,7 @@
   },
   {
     "Username": "Priscilla",
-    "Gender": "female",
+    "Gender": "femen",
     "DateOfBirth": "1958-05-03",
     "Password": "password",
     "KnownAs": "Priscilla",
@@ -41,7 +41,7 @@
   },
   {
     "Username": "Lauren",
-    "Gender": "female",
+    "Gender": "femen",
     "DateOfBirth": "1967-07-07",
     "Password": "password",
     "KnownAs": "Lauren",
@@ -61,7 +61,7 @@
   },
   {
     "Username": "Ava",
-    "Gender": "female",
+    "Gender": "femen",
     "DateOfBirth": "1976-02-18",
     "Password": "password",
     "KnownAs": "Ava",
@@ -81,7 +81,7 @@
   },
   {
     "Username": "Haley",
-    "Gender": "female",
+    "Gender": "femen",
     "DateOfBirth": "1970-03-16",
     "Password": "password",
     "KnownAs": "Haley",
@@ -101,7 +101,7 @@
   },
   {
     "Username": "Joseph",
-    "Gender": "male",
+    "Gender": "men",
     "DateOfBirth": "1989-12-04",
     "Password": "password",
     "KnownAs": "Joseph",
@@ -113,7 +113,7 @@
     "Country": "Puerto Rico",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/male/10.jpg",
+        "url": "https://randomuser.me/api/portraits/men/10.jpg",
         "isMain": true,
         "description": "Nulla occaecat exercitation labore quis ea anim culpa consectetur laborum occaecat esse."
       }
@@ -121,7 +121,7 @@
   },
   {
     "Username": "Fulton",
-    "Gender": "male",
+    "Gender": "men",
     "DateOfBirth": "1987-10-24",
     "Password": "password",
     "KnownAs": "Fulton",
@@ -133,7 +133,7 @@
     "Country": "Bermuda",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/male/55.jpg",
+        "url": "https://randomuser.me/api/portraits/men/55.jpg",
         "isMain": true,
         "description": "Laborum labore ad proident esse officia ullamco sint."
       }
@@ -141,7 +141,7 @@
   },
   {
     "Username": "Barlow",
-    "Gender": "male",
+    "Gender": "men",
     "DateOfBirth": "1950-07-23",
     "Password": "password",
     "KnownAs": "Barlow",
@@ -153,7 +153,7 @@
     "Country": "Sudan",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/male/39.jpg",
+        "url": "https://randomuser.me/api/portraits/men/39.jpg",
         "isMain": true,
         "description": "Laboris fugiat amet ex eu."
       }
@@ -161,7 +161,7 @@
   },
   {
     "Username": "Wright",
-    "Gender": "male",
+    "Gender": "men",
     "DateOfBirth": "1988-06-01",
     "Password": "password",
     "KnownAs": "Wright",
@@ -173,7 +173,7 @@
     "Country": "Libya",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/male/58.jpg",
+        "url": "https://randomuser.me/api/portraits/men/58.jpg",
         "isMain": true,
         "description": "Ut consequat cillum aute esse consectetur ipsum pariatur voluptate esse culpa nisi sint in voluptate."
       }
@@ -181,7 +181,7 @@
   },
   {
     "Username": "Bender",
-    "Gender": "male",
+    "Gender": "men",
     "DateOfBirth": "1961-10-28",
     "Password": "password",
     "KnownAs": "Bender",
@@ -193,7 +193,7 @@
     "Country": "Iraq",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/male/3.jpg",
+        "url": "https://randomuser.me/api/portraits/men/3.jpg",
         "isMain": true,
         "description": "Dolor sit ea consectetur deserunt officia."
       }
