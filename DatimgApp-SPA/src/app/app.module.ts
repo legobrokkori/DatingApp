@@ -33,6 +33,8 @@ import { MemberEditResolver } from 'src/app/_resolvers/member-edit.resolver';
 import { PreventUnsavedChanges } from 'src/app/_guards/prevent-unsaved-changes.guard';
 import { PhotoEditorComponent } from 'src/app/members/photo-editor/photo-editor.component';
 import { ListsResolver } from 'src/app/_resolvers/lists.resolver';
+import { MessagesResolver } from 'src/app/_resolvers/messages.resolver';
+import { MemberMessagesComponent } from 'src/app/members/member-messages/member-messages.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -51,7 +53,8 @@ export function tokenGetter() {
     MemberDetailComponent,
     MemberEditComponent,
     PhotoEditorComponent,
-    TimeAgoPipe
+    TimeAgoPipe,
+    MemberMessagesComponent
   ],
   imports: [
     BrowserModule,
@@ -84,7 +87,8 @@ export function tokenGetter() {
     MemberListResolver,
     MemberEditResolver,
     PreventUnsavedChanges,
-    ListsResolver
+    ListsResolver,
+    MessagesResolver
   ],
   bootstrap: [AppComponent]
 })
