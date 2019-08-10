@@ -113,7 +113,7 @@
     "Country": "Puerto Rico",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/male/10.jpg",
+        "url": "https://randomuser.me/api/portraits/men/10.jpg",
         "isMain": true,
         "description": "Nulla occaecat exercitation labore quis ea anim culpa consectetur laborum occaecat esse."
       }
@@ -133,7 +133,7 @@
     "Country": "Bermuda",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/male/55.jpg",
+        "url": "https://randomuser.me/api/portraits/men/55.jpg",
         "isMain": true,
         "description": "Laborum labore ad proident esse officia ullamco sint."
       }
@@ -153,7 +153,7 @@
     "Country": "Sudan",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/male/39.jpg",
+        "url": "https://randomuser.me/api/portraits/men/39.jpg",
         "isMain": true,
         "description": "Laboris fugiat amet ex eu."
       }
@@ -173,7 +173,7 @@
     "Country": "Libya",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/male/58.jpg",
+        "url": "https://randomuser.me/api/portraits/men/58.jpg",
         "isMain": true,
         "description": "Ut consequat cillum aute esse consectetur ipsum pariatur voluptate esse culpa nisi sint in voluptate."
       }
@@ -193,7 +193,7 @@
     "Country": "Iraq",
     "Photos": [
       {
-        "url": "https://randomuser.me/api/portraits/male/3.jpg",
+        "url": "https://randomuser.me/api/portraits/men/3.jpg",
         "isMain": true,
         "description": "Dolor sit ea consectetur deserunt officia."
       }
