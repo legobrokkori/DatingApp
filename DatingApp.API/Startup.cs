@@ -25,6 +25,7 @@ using AutoMapper;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.Extensions.Hosting;
 
 namespace DatingApp.API
 {
@@ -83,23 +84,23 @@ namespace DatingApp.API
                     options.Filters.Add(new AuthorizeFilter(policy));
                 }
             )
-                .SetCompatibilityVersion(CompatibilityVersion.Version_2_1)
-                .AddJsonOptions(opt =>
+                .SetCompatibilityVersion(CompatibilityVersion.Version_3_0)
+                .AddNewtonsoftJson(opt =>
                 {
                     opt.SerializerSettings.ReferenceLoopHandling =
                         Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
             services.AddCors();
             services.Configure<CloudinarySettings>(Configuration.GetSection("CloudinarySettings"));
-            Mapper.Reset();
-            services.AddAutoMapper();
+            //Mapper.Reset();
+            services.AddAutoMapper(typeof(Startup));
             services.AddTransient<Seed>();
             services.AddScoped<IDatingRepository, DatingRepository>();
             services.AddScoped<LogUserActivity>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env, Seed seeder)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, Seed seeder)
         {
             if (env.IsDevelopment())
             {
@@ -127,11 +128,10 @@ namespace DatingApp.API
             app.UseAuthentication();
             app.UseDefaultFiles();
             app.UseStaticFiles();
-            app.UseMvc(routes => {
-                routes.MapSpaFallbackRoute(
-                    name: "spa-fullback",
-                    defaults: new { controller = "Fallback", action="Index" }
-                );
+            app.UseRouting();
+            app.UseEndpoints(endpoints => {
+                endpoints.MapControllers();
+                //endpoints.MapFallbackToController("Fallback", "Index" );
             });
         }
     }

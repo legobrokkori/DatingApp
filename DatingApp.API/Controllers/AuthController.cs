@@ -61,6 +61,8 @@ namespace DatingApp.API.Controllers
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
             var user = await _userManager.FindByNameAsync(userForLoginDto.Username);
+            if (user == null)
+                return NotFound();
             var result = await _signInManager
                 .CheckPasswordSignInAsync(user, userForLoginDto.Password, false);
 
