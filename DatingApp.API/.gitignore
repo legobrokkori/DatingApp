@@ -2,4 +2,6 @@
 bin
 obj
 *.db
+wwwroot
 appsettings.json
+*.DS_Store

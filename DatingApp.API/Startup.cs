@@ -40,7 +40,12 @@ namespace DatingApp.API
 
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<DataContext>(x => x.UseSqlite(Configuration.GetConnectionString("DefaultConnection")));
+            services.AddDbContext<DataContext>(x => 
+            {
+                x.UseLazyLoadingProxies();
+                //x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
+                x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+            });
 
             IdentityBuilder builder = services.AddIdentityCore<User>(opt =>
             {
@@ -131,7 +136,7 @@ namespace DatingApp.API
             app.UseRouting();
             app.UseEndpoints(endpoints => {
                 endpoints.MapControllers();
-                //endpoints.MapFallbackToController("Fallback", "Index" );
+                endpoints.MapFallbackToController("Fallback", "Index" );
             });
         }
     }
