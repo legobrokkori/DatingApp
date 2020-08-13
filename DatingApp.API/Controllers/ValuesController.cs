@@ -21,7 +21,7 @@ namespace DatingApp.API.Controllers
         }
 
 
-        [Authorize(Roles = "admin")]
+        [Authorize(Roles = "Admin")]
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
