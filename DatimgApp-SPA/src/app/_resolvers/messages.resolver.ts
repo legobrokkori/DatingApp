@@ -17,7 +17,6 @@ export class MessagesResolver implements Resolve<Message[]> {
         private router: Router, private alertify: AlertifyService) {}
 
     resolve(router: ActivatedRouteSnapshot): Observable<Message[]> {
-      console.log(this.messageContainer);
       return this.userService
         .getMessages(this.authService.decodedToken.nameid,
           this.pageNumber, this.pageSize, this.messageContainer)
