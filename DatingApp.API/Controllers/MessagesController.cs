@@ -26,6 +26,7 @@ namespace DatingApp.API.Controllers
 
         }
 
+        [ActionName(nameof(GetMessage))]
         [HttpGet("{id}", Name = "GetMessage")]
         public async Task<IActionResult> GetMessage(int userId, int id)
         {
@@ -94,7 +95,11 @@ namespace DatingApp.API.Controllers
             if (await _repo.SaveAll())
             {
                 var messageToReturn = _mapper.Map<MessageToReturnDto>(message);
-                return CreatedAtRoute("GetMessage", new {id = message.Id}, messageToReturn);
+                return CreatedAtAction(nameof(GetMessage), new 
+                    {
+                        controller = "Messages",
+                        id = message.Id
+                    }, messageToReturn);
             }
             
             throw new Exception("Creating the message failed on save");
