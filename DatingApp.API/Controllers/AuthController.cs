@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using System.IdentityModel.Tokens.Jwt;
 using System.Collections.Generic;
 using System.Security.Claims;
@@ -53,16 +54,16 @@ namespace DatingApp.API.Controllers
                     id = userToCreate.Id
                 }, userForReturn);
             }
-
-            return BadRequest(result.Errors);
+            var errors = result.Errors.ToArray();
+            return BadRequest(errors[0].Description);
         }
 
         [HttpPost("login")]
         public async Task<IActionResult> Login(UserForLoginDto userForLoginDto)
         {
             var user = await _userManager.FindByNameAsync(userForLoginDto.Username);
-            //if (user == null)
-            // /    return Unauthorized();
+            if (user == null)
+                return Unauthorized();
             var result = await _signInManager
                 .CheckPasswordSignInAsync(user, userForLoginDto.Password, false);
 

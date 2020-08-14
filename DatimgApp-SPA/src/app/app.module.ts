@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { BsDropdownModule, TabsModule, PaginationModule, ButtonsModule } from 'ngx-bootstrap';
+import { BsDropdownModule, TabsModule, PaginationModule, ButtonsModule, ModalModule } from 'ngx-bootstrap';
 import { RouterModule } from '@angular/router';
 import { JwtModule } from '@auth0/angular-jwt';
 import { NgxGalleryModule } from 'ngx-gallery';
@@ -40,6 +40,7 @@ import { HasRoleDirective } from 'src/app/_directives/hasRole.directive';
 import { PhotoManagementComponent } from 'src/app/admin/photo-management/photo-management.component';
 import { UserManagementComponent } from 'src/app/admin/user-management/user-management.component';
 import { AdminService } from 'src/app/_services/admin.service';
+import { RolesModelComponent } from './admin/roles-model/roles-model.component';
 
 export function tokenGetter() {
   return localStorage.getItem('token');
@@ -63,7 +64,8 @@ export function tokenGetter() {
     AdminPanelComponent,
     HasRoleDirective,
     PhotoManagementComponent,
-    UserManagementComponent
+    UserManagementComponent,
+    RolesModelComponent
   ],
   imports: [
     BrowserModule,
@@ -76,6 +78,7 @@ export function tokenGetter() {
     RouterModule.forRoot(appRoutes),
     TabsModule.forRoot(),
     ButtonsModule.forRoot(),
+    ModalModule.forRoot(),
     NgxGalleryModule,
     FileUploadModule,
     JwtModule.forRoot({
@@ -99,6 +102,9 @@ export function tokenGetter() {
     ListsResolver,
     MessagesResolver,
     AdminService
+  ],
+  entryComponents: [
+    RolesModelComponent
   ],
   bootstrap: [AppComponent]
 })

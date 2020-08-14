@@ -134,7 +134,7 @@ namespace DatingApp.API
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints => {
-                endpoints.MapControllers();
+                endpoints.MapDefaultControllerRoute();
                 //endpoints.MapFallbackToController("Fallback", "Index" );
             });
         }

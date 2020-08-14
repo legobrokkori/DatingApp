@@ -21,7 +21,7 @@ namespace DatingApp.API.Controllers
         }
 
 
-        [Authorize(Roles = "Admin")]
+        [Authorize(Roles = "AControllers/FallBack.csdmin")]
         [HttpGet]
         public async Task<IActionResult> GetValues()
         {
