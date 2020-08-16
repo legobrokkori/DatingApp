@@ -23,7 +23,6 @@ export class MessagesComponent implements OnInit {
     this.route.data.subscribe(data => {
       this.messages = data['messages'].result;
       this.pagination = data['messages'].pagination;
-      console.log(this.messages);
     });
   }
 
@@ -35,7 +34,6 @@ export class MessagesComponent implements OnInit {
           .subscribe((res: PaginatedResult<Message[]>) => {
             this.messages = res.result;
             this.pagination = res.pagination;
-            console.log(this.messages);
         }, error => {
           this.alertify.error(error);
         });
