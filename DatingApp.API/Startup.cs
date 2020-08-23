@@ -42,8 +42,9 @@ namespace DatingApp.API
         {
             services.AddDbContext<DataContext>(x => 
             {
-                x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
+                //x.UseSqlite(Configuration.GetConnectionString("DefaultConnection"));
                 //x.UseSqlServer(Configuration.GetConnectionString("DefaultConnection"));
+                x.UseMySql(Configuration.GetConnectionString("DefaultConnection"));
             });
 
             IdentityBuilder builder = services.AddIdentityCore<User>(opt =>
