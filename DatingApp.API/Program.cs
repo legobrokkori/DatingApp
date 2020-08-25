@@ -9,6 +9,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.AspNetCore.Identity;
 using DatingApp.API.Models;
+using System.IO;
 
 namespace DatingApp.API
 {
@@ -16,7 +17,9 @@ namespace DatingApp.API
     {
         public static void Main(string[] args)
         {
-            var host = CreateWebHostBuilder(args).Build();
+            var host = CreateWebHostBuilder(args)
+            .UseContentRoot(Directory.GetCurrentDirectory())
+            .Build();
             using (var scope = host.Services.CreateScope())
             {
                 var services = scope.ServiceProvider;
@@ -34,7 +37,7 @@ namespace DatingApp.API
                     logger.LogError(ex, "An error occured during migration");
                 }
             }
-
+            
             host.Run();
         }
 

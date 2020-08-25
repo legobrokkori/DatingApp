@@ -45,7 +45,7 @@
               "aot": true,
               "extractLicenses": true,
               "vendorChunk": false,
-              "buildOptimizer": true
+              "buildOptimizer": false
             }
           }
         },
@@ -125,5 +125,8 @@
       }
     }
   },
-  "defaultProject": "DatimgApp-SPA"
+  "defaultProject": "DatimgApp-SPA",
+  "cli": {
+    "analytics": "a9ff1b9d-becb-49ba-9bb6-748794234a08"
+  }
 }
